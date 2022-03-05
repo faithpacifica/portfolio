@@ -5,7 +5,7 @@ import styled from "styled-components";
 import "animate.css";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Flip from "react-reveal/Flip";
-import Rotate from 'react-reveal/Rotate';
+import Rotate from "react-reveal/Rotate";
 // Icons
 import { SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
@@ -24,7 +24,7 @@ import { SiMaterialui } from "react-icons/si";
 import { SiNetlify } from "react-icons/si";
 import { SiFigma } from "react-icons/si";
 
-// import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import Tooltip from "@mui/material/Tooltip";
 
 // ************************************************
 const AboutPage = styled.div`
@@ -37,7 +37,7 @@ const AboutHeader = styled.h1`
   font-weight: 700;
   padding-left: 2rem;
   padding-right: 2rem;
-  color: #6c81d1  ;
+  color: #6c81d1;
   font-weight: 400;
   margin-top: 0;
   position: relative;
@@ -108,7 +108,7 @@ const Skills = styled.div`
 `;
 
 const SkillsTitle = styled.h2`
-  color: #6c81d1  ;
+  color: #6c81d1;
   font-size: 40px;
   text-align: center;
 `;
@@ -116,10 +116,10 @@ const SkillsTitle = styled.h2`
 const Icons = styled.div`
   svg {
     display: inline-block;
-    margin-right:20px;
-    margin-left:20px;
-    font-size:50px;
-    margin-bottom:30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 50px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -129,7 +129,6 @@ const About = () => {
   setTimeout(() => {
     setLoading(false);
   }, 2000);
-
 
   return (
     <>
@@ -225,28 +224,57 @@ const About = () => {
               <SkillsTitle className="skills__title">My Skills</SkillsTitle>
 
               <Icons>
-              <Rotate top left >
-              {/* <LightTooltip title="HTML"> */}
-                <AiOutlineHtml5 title='HTML' style={{color:'#E96228'}}/>
-              {/* </LightTooltip> */}
-                <IoLogoCss3 style={{color:'#254BDD'}}/>
-                <DiSass style={{color:'#C76494'}}/>
-                <DiJavascript1 style={{color:'#F5DE18'}}/>
-                <FaReact style={{color:'#5ED3F3'}}/>
-                <DiNpm style={{color:'#C53635'}}/>
-                <SiTypescript style={{color:'#0176C5'}}/>
-                <BsGithub style={{color:'#000000'}}/>
-                <SiRedux style={{color:'#7248B6'}}/>
-                <SiGraphql style={{color:'#DE33A6'}}/>
-                <BsBootstrap style={{color:'#7612F2'}}/>
-                <FaGitAlt style={{color:'#E84E31'}}/>
-                <SiGitlab style={{color:'#E84E31'}}/>
-                <SiMaterialui style={{color:'#09ABF7'}}/>
-                <SiNetlify style={{color:'#419FB7'}} />
-                <SiFigma style={{color:'#000'}}/>
+                <Rotate top left>
+                  <Tooltip title="HTML">
+                    <AiOutlineHtml5 title="HTML" style={{ color: "#E96228" }} />
+                  </Tooltip>
+                  <Tooltip title="CSS">
+                    <IoLogoCss3 title="CSS" style={{ color: "#254BDD" }} />
+                  </Tooltip>
+                  <Tooltip title="Sass">
+                    <DiSass title="Sass" style={{ color: "#C76494" }} />
+                  </Tooltip>
+                  <Tooltip title="JavaScript">
+                    <DiJavascript1 title="JavaScript" style={{ color: "#F5DE18" }} />
+                  </Tooltip>
+                  <Tooltip title="React">
+                    <FaReact title="React" style={{ color: "#5ED3F3" }} />
+                  </Tooltip>
+                  <Tooltip title="npm">
+                    <DiNpm title="npm" style={{ color: "#C53635" }} />
+                  </Tooltip>
+                  <Tooltip title="Typescript">
+                    <SiTypescript title="Typescript" style={{ color: "#0176C5" }} />
+                  </Tooltip>
+                  <Tooltip title="Github">
+                    <BsGithub title="Github" style={{ color: "#000000" }} />
+                  </Tooltip>
+                  <Tooltip title="Redux">
+                    <SiRedux title="Redux" style={{ color: "#7248B6" }} />
+                  </Tooltip>
+                  <Tooltip title="GraphQL">
+                    <SiGraphql title="GraphQL" style={{ color: "#DE33A6" }} />
+                  </Tooltip>
+                  <Tooltip title="Bootstrap">
+                    <BsBootstrap title="Bootstrap" style={{ color: "#7612F2" }} />
+                  </Tooltip>
+                  <Tooltip title="Git">
+                    <FaGitAlt title="Git" style={{ color: "#E84E31" }} />
+                  </Tooltip>
+                  <Tooltip title="Gitlab">
+                    <SiGitlab  title="Gitlab" style={{ color: "#E84E31" }} />
+                  </Tooltip>
+                  <Tooltip title="Material UI">
+                    <SiMaterialui title="Material UI" style={{ color: "#09ABF7" }} />
+                  </Tooltip>
+                  <Tooltip title="Netlify">
+                    <SiNetlify title="Netlify" style={{ color: "#419FB7" }} />
+                  </Tooltip>
+                  <Tooltip title="Figma">
+                    <SiFigma title="Figma" style={{ color: "#000" }} />
+                  </Tooltip>
                 </Rotate>
               </Icons>
-
             </Skills>
 
             <span className="tags bottom-tags">

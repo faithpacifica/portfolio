@@ -14,7 +14,7 @@ const SidebarSection = styled.div`
   height: 100vh;
   background-color: #191d2b;
   border-right: 1px solid #2e344e;
-  z-index: 10;
+  z-index: 2000;
   transition: all 0.4s ease-out;
   border-right: 1px solid #2e344e;
   box-shadow: 0 20px 30px 10px rgb(28 9 80 / 5%);
