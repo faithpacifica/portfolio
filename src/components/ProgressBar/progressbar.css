@@ -1,0 +1,46 @@
+.ProgressBar {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+
+  .barContainer {
+    flex: 1;
+    height: 8px;
+    background: #dfdfe7;
+    border-radius: 12px;
+    overflow: hidden; /* Crucial part */
+  }
+  
+  .textValue {
+    margin-left: 8px;
+    width: 42px;
+    text-align: right;
+  }
+  
+  .fillerBackground {
+    height: inherit;
+    transition: "width 2s ease-i-out";
+    background: linear-gradient(90deg, purple, darkorange);
+  }
+  
+  .filler {
+    transition: "width 2s ease-i-out";
+    height: inherit;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+  
+  @keyframes load {
+    0% {
+    transform: scaleX(0);
+    }
+    90% {
+    transform: scaleX(1);
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    visibility: hidden;
+    }
+}
