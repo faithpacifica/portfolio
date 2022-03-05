@@ -205,6 +205,7 @@ const Contact = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6928.192964149718!2d69.34995539221646!3d41.28052840398892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5f5fc5e6cdc7%3A0xbfb6f3427bffbc73!2zNC3QkdC10LrQsNGC!5e0!3m2!1sru!2s!4v1640327358859!5m2!1sru!2s"
                 width="400"
                 height="400"
+                title ='googleMap'
                 allowfullscreen=""
                 loading="lazy"
               ></iframe>

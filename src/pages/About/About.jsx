@@ -24,7 +24,7 @@ import { SiMaterialui } from "react-icons/si";
 import { SiNetlify } from "react-icons/si";
 import { SiFigma } from "react-icons/si";
 
-import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+// import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 
 // ************************************************
 const AboutPage = styled.div`

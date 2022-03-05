@@ -10,12 +10,12 @@ const PortfolioSection = styled.section`
   padding: 20px;
 `;
 
-const Title = styled.h1`
-  font-size: 50px;
-  line-height: 2.8;
-  color: #6c81d1  ;
-  margin: 0;
-`;
+// const Title = styled.h1`
+//   font-size: 50px;
+//   line-height: 2.8;
+//   color: #6c81d1  ;
+//   margin: 0;
+// `;
 
 const Tab = styled.div`
   display: flex;
@@ -210,7 +210,7 @@ export default function Portfolio() {
                 <h4>{el.title}</h4>
 
                 <ProjectCard  style={{width:'300px', height:'300px', objectFit:'contain' }}>
-                  <a href={el.link} target='_blank'>
+                  <a href={el.link} target='_blank' rel="noreferrer">
                     <img src={el.image} alt={el.title}  />
                   </a>
                 </ProjectCard>
