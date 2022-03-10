@@ -83,6 +83,7 @@ const P = styled.p`
   font-family: "Open Sans", sans-serif;
   text-indent: 25px;
   font-style: italic;
+
   &:before {
     content: "<p>";
     font-family: "La Belle Aurore", cursive;
@@ -142,9 +143,9 @@ const About = () => {
             </span>
 
             <div className="page-inner">
-              <div className="section-full page-about js-page-about">
-                <div className="text-zone">
-                  <header>
+              <div className="page-inner__about">
+                <div className="page-inner__text">
+                  <header className="page-inner__header">
                     <AboutHeader
                       aria-label="My, Myself  &amp;  I"
                       className="blast-root "
@@ -195,30 +196,45 @@ const About = () => {
 
                   <P>
                     <Flip bottom>
-                      <i>
-                        I'm a Front-End Developer living Uzbekistan. I have a
-                        serious passion for coding dynamic user experiences.
-                      </i>
+                      I'm a Front-End Developer living Uzbekistan. I have a
+                      serious passion for coding dynamic user experiences.
                     </Flip>
 
                     <Flip bottom>
-                      <i>
-                        Well-organized person, former PM, independent employee
-                        with high attention to details. I love outdoor
-                        activities,watching movies and books. A family person
-                        and a mother of my daughter.
-                      </i>
+                      Well-organized person, former PM, independent employee
+                      with high attention to details. I love outdoor
+                      activities,watching movies and books. A family person and
+                      a mother of my daughter.
                     </Flip>
                     <Flip bottom>
-                      <i>
-                        Interested in the entire frontend spectrum and working
-                        on ambitious projects with positive people.
-                      </i>
+                      Interested in the entire frontend spectrum and working on
+                      ambitious projects with positive people.
                     </Flip>
                   </P>
                 </div>
               </div>
             </div>
+
+            <ul>
+              <li>
+                <b>Full Name</b> Muslimova Dildora
+              </li>
+              <li>
+                <b>Age</b> <span>36</span> Years old
+              </li>
+              <li>
+                <b>Nationality</b> Uzbek
+              </li>
+              <li>
+                <b>Languages</b> Uzbek, Russian, English, Japanese
+              </li>
+              <li>
+                <b>Address</b> 9 Iltifot Street, Tashkent, Uzbekistan
+              </li>
+              <li>
+                <b>Freelance</b> Available
+              </li>
+            </ul>
 
             <Skills className="skills">
               <SkillsTitle className="skills__title">My Skills</SkillsTitle>
@@ -235,7 +251,10 @@ const About = () => {
                     <DiSass title="Sass" style={{ color: "#C76494" }} />
                   </Tooltip>
                   <Tooltip title="JavaScript">
-                    <DiJavascript1 title="JavaScript" style={{ color: "#F5DE18" }} />
+                    <DiJavascript1
+                      title="JavaScript"
+                      style={{ color: "#F5DE18" }}
+                    />
                   </Tooltip>
                   <Tooltip title="React">
                     <FaReact title="React" style={{ color: "#5ED3F3" }} />
@@ -244,7 +263,10 @@ const About = () => {
                     <DiNpm title="npm" style={{ color: "#C53635" }} />
                   </Tooltip>
                   <Tooltip title="Typescript">
-                    <SiTypescript title="Typescript" style={{ color: "#0176C5" }} />
+                    <SiTypescript
+                      title="Typescript"
+                      style={{ color: "#0176C5" }}
+                    />
                   </Tooltip>
                   <Tooltip title="Github">
                     <BsGithub title="Github" style={{ color: "#000000" }} />
@@ -256,16 +278,22 @@ const About = () => {
                     <SiGraphql title="GraphQL" style={{ color: "#DE33A6" }} />
                   </Tooltip>
                   <Tooltip title="Bootstrap">
-                    <BsBootstrap title="Bootstrap" style={{ color: "#7612F2" }} />
+                    <BsBootstrap
+                      title="Bootstrap"
+                      style={{ color: "#7612F2" }}
+                    />
                   </Tooltip>
                   <Tooltip title="Git">
                     <FaGitAlt title="Git" style={{ color: "#E84E31" }} />
                   </Tooltip>
                   <Tooltip title="Gitlab">
-                    <SiGitlab  title="Gitlab" style={{ color: "#E84E31" }} />
+                    <SiGitlab title="Gitlab" style={{ color: "#E84E31" }} />
                   </Tooltip>
                   <Tooltip title="Material UI">
-                    <SiMaterialui title="Material UI" style={{ color: "#09ABF7" }} />
+                    <SiMaterialui
+                      title="Material UI"
+                      style={{ color: "#09ABF7" }}
+                    />
                   </Tooltip>
                   <Tooltip title="Netlify">
                     <SiNetlify title="Netlify" style={{ color: "#419FB7" }} />

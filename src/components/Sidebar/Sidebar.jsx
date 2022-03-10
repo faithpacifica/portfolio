@@ -18,6 +18,9 @@ const SidebarSection = styled.div`
   transition: all 0.4s ease-out;
   border-right: 1px solid #2e344e;
   box-shadow: 0 20px 30px 10px rgb(28 9 80 / 5%);
+  @media (max-width:767px) {
+   display:none;
+  }
 `;
 
 const Nav = styled.nav`
@@ -56,6 +59,7 @@ const SocialMedia = styled.div`
   font-size:2rem;
   margin-top:20px;
   margin-bottom:30px;
+  text-align:center;
 
   a{
     color:#fff;
@@ -71,19 +75,22 @@ border-top: 1px solid #2e344e;
 }
 `;
 
+
+
 // ************************************
 const Sidebar = () => {
   return (
-    <SidebarSection className="sidebar">
-      <Nav className="">
-        <div className="inner">
-          <LogoWrapper className="image">
-            <a href="/">
-              <img alt="logo" src="../../../img/logo.svg" />
+    <SidebarSection className="sidebar-section">
+
+      <Nav className="navbar">
+        <div className="navbar-inner">
+          <LogoWrapper className="navbar-image">
+            <a className="navbar-link" href="/">
+              <img className="navbar-logo" alt="logo" src="../../../img/logo.svg" width={200} height={200}/>
             </a>
           </LogoWrapper>
         
-          <NavbarMenu className="">
+          <NavbarMenu className="navbar-menu">
             <NavbarMenuList>
               <NavLink to="/" activeClassName="active " className="link">
                 Home
@@ -111,7 +118,7 @@ const Sidebar = () => {
             </NavbarMenuList>
           </NavbarMenu>
 
-          <SocialMedia className="social-media-div">
+          <SocialMedia className="social-media-wrapper">
             <a
               href="https://github.com/faithpacifica"
               className="icon-button github"
@@ -145,9 +152,11 @@ const Sidebar = () => {
               <i className="fab fa-telegram-plane"></i>
             </a>
           </SocialMedia>
+
           <Built>
             <i className="far fa-copyright"></i> Built with React
           </Built>
+
         </div>
       </Nav>
     </SidebarSection>

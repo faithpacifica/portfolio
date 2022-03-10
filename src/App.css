@@ -28,6 +28,12 @@ a{
   transition: all .4s ease-out;
 }
 
+ul, li {
+  list-style:none;
+  margin:none;
+  padding:none;
+}
+
   .wrapper{
     padding-left:280px;
 }
@@ -143,5 +149,10 @@ a{
   animation-name: rubberBand
 }
 
-
 /* --------------------------- */
+/* RESPONSIVE */
+@media (max-width:767px) {
+  .wrapper{
+    padding-left:0px;
+}
+ }
