@@ -8,7 +8,7 @@ import Fade from "react-reveal/Fade";
 import "animate.css";
 
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import { AiOutlineClose } from "react-icons/ai";
 // ************************************************************
 const Container = styled.div`
   position: relative;
@@ -27,9 +27,13 @@ const HomeSection = styled.div`
     padding: 30px 30px;
   }
   @media (max-width: 767px) {
-    padding: 60px;
+    padding: 50px;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 500px) {
+    padding: 50px 30px;
+  }
+  @media (max-width: 425px) {
+    padding: 60px 20px;
   }
 `;
 
@@ -44,6 +48,11 @@ const Text = styled.p`
    @media (max-width: 895px) {
     line-height: 1.5rem;
     font-size: 1.1rem;
+   }
+   @media (max-width: 530px) {
+    line-height: 1.2rem;
+    font-size: 1.1rem;
+   }
 `;
 
 const HomeHeader = styled.h1`
@@ -53,7 +62,8 @@ const HomeHeader = styled.h1`
   font-size: 4rem;
   line-height: 4rem;
   transition: all 0.5s ease-out;
-  letter-spacing: -5px;
+  letter-spacing: -2px;
+  margin:0;
 
   span {
     color: #6c81d1;
@@ -74,13 +84,36 @@ const HomeHeader = styled.h1`
       margin: 0;
     }
     @media (max-width: 895px) {
-      font-size: 3.5rem;
+      font-size: 3.4rem;
       line-height: 4rem;
     }
+    @media (max-width: 795px) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
+    @media (max-width: 425px) {
+      font-size: 2.1rem;
+      line-height: 3rem;
+    }
+  
   }
 
   @media (max-width: 1101px) {
     font-size: 2.8rem;
+  }
+  @media (max-width: 795px) {
+    font-size: 2.4rem;
+  }
+
+  @media (max-width: 530px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 425px) {
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
 `;
 
@@ -90,11 +123,12 @@ const HamburgerButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  position:absolute;
   background-color: #191d2b;
   height: 50px;
   width: 50px;
-  left: 100%;
-  top: 20px;
+  right: -45px;
+  top: -45px;
   padding: 0;
   border: none;
   border: 1px solid #2e344e;
@@ -111,15 +145,63 @@ const HamburgerButton = styled.button`
   @media (max-width: 767px) {
     display: block;
   }
+
+  @media (max-width: 500px) {
+    right:-20px;
+  }
+  @media (max-width: 425px) {
+    right:-10px;
+  }
 `;
+const CloseButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  background-color: #191d2b;
+  height: 50px;
+  width: 50px;
+  right: -45px;
+  top: -45px;
+  padding: 0;
+  border: none;
+  border: 1px solid #2e344e;
+  position: absolute;
+  font-size: 1.6rem;
+  text-align: center;
+  display: none;
+
+  svg {
+    display: inline-block;
+    color: #a4acc4;
+    line-height: 1;
+  }
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  @media (max-width: 500px) {
+    right:-20px;
+  }
+  @media (max-width: 425px) {
+    right:-10px;
+  }
+`;
+
 // *************************************
 const Home = () => {
   const [loading, setLoading] = useState(true);
+
+  const [closeToggle, setCloseToggle ] = useState(false)
 
   setTimeout(() => {
     setLoading(false);
   }, 2000);
 
+
+  const buttonToggler = (e) => {
+    console.log(e.target)
+  }
   // ************************************
   return (
     <>
@@ -131,10 +213,14 @@ const Home = () => {
 
           <Container className="container">
             <HomeContent className="home-content">
-              {/* Hamburger button */}
-              <HamburgerButton>
+              <HamburgerButton onClick={buttonToggler}>
                 <GiHamburgerMenu />
               </HamburgerButton>
+             
+              <CloseButton>
+                 <AiOutlineClose onClick ={() => setCloseToggle(!closeToggle)}/>
+              </CloseButton>
+
               <HomeHeader>
                 Hi, I am <br />
                 <span className="blast" aria-hidden="true">

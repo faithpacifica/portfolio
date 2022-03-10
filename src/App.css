@@ -155,4 +155,8 @@ ul, li {
   .wrapper{
     padding-left:0px;
 }
+
+.tsparticles-canvas-el{
+  left:0px !important;
+}
  }

@@ -70,6 +70,7 @@ const SocialMedia = styled.div`
 const Built = styled.div`
 padding:8px 0;
 border-top: 1px solid #2e344e;
+text-align:center;
 &:hover{
   color: #6c81d1  ;
 }

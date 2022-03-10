@@ -16,11 +16,18 @@ const Progress = styled.div`
 `;
   
   const Bar = styled.div`
-    width: 600px;
+    width: 550px;
     height: 5px;
     background-image: linear-gradient(to right, rgb(252, 0, 255), rgb(3, 127, 255));
     transform-origin: left;
     animation: load 2s forwards;
+
+     @media (max-width: 767px) {
+     width:400px;
+    }
+     @media (max-width: 425px) {
+     width:250px;
+    }
   `;
  
   
