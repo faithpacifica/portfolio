@@ -169,7 +169,7 @@ const CloseButton = styled.button`
   position: absolute;
   font-size: 1.6rem;
   text-align: center;
-  display: none;
+  // display: none;
 
   svg {
     display: inline-block;
