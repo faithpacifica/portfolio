@@ -24,6 +24,7 @@ function App() {
     }
   }, [location.pathname]);
 
+
   useEffect(() => {
     if (loading) {
       setTimeout(() => {
@@ -31,6 +32,7 @@ function App() {
       }, [2000]);
     }
   }, [loading]);
+  
 
   return (
     <div className="wrapper">
