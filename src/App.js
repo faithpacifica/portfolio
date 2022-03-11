@@ -22,6 +22,7 @@ function App() {
     if (sidebarOpen) {
       setSidebarOpen(false);
     }
+    // eslint-disable-next-line
   }, [location.pathname]);
 
 
@@ -32,7 +33,7 @@ function App() {
       }, [2000]);
     }
   }, [loading]);
-  
+
 
   return (
     <div className="wrapper">
