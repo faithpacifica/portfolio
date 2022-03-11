@@ -22,7 +22,7 @@ function App() {
     if (sidebarOpen) {
       setSidebarOpen(false);
     }
-  }, [location.pathname,sidebarOpen]);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (loading) {
