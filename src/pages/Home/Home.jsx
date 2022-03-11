@@ -159,7 +159,7 @@ const HamburgerButton = styled.button`
 
 // *************************************
 const Home = () => {
-  const [,setSidebarCloser] = useContext(Context)
+  // const [,setSidebarCloser] = useContext(Context)
   
 
   const [loading, setLoading] = useState(true);
