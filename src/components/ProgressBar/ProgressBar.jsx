@@ -16,7 +16,7 @@ const Progress = styled.div`
 `;
   
   const Bar = styled.div`
-    width: 550px;
+    width: 500px;
     height: 5px;
     background-image: linear-gradient(to right, rgb(252, 0, 255), rgb(3, 127, 255));
     transform-origin: left;

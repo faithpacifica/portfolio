@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import "./sidebar.css";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+import { AiOutlineClose } from "react-icons/ai";
 
 // -------------------------------
 const SidebarSection = styled.div`
@@ -54,13 +55,11 @@ const NavbarMenu = styled.ul`
 const NavbarMenuList = styled.li`
   `;
 
-
 const SocialMedia = styled.div`
   font-size:2rem;
   margin-top:20px;
   margin-bottom:30px;
   text-align:center;
-
   a{
     color:#fff;
     cursor:pointer;
@@ -76,14 +75,55 @@ text-align:center;
 }
 `;
 
+const CloseButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  background-color: #191d2b;
+  height: 50px;
+  width: 50px;
+  left:100%;
+  top: 20px;
+  padding: 0;
+  border: none;
+  border: 1px solid #2e344e;
+  position: absolute;
+  font-size: 1.6rem;
+  text-align: center;
+  display: none;
 
+  svg {
+    display: inline-block;
+    color: #a4acc4;
+    line-height: 1;
+  }
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  @media (max-width: 500px) {
+    right:-20px;
+  }
+  @media (max-width: 425px) {
+    right:-10px;
+  }
+`;
 
 // ************************************
 const Sidebar = () => {
+
+  const [closeToggle, setCloseToggle ] = useState(false);
+
+
   return (
     <SidebarSection className="sidebar-section">
-
+        
       <Nav className="navbar">
+        <CloseButton className ='close-button' onClick ={() => setCloseToggle(!closeToggle)}>
+            <AiOutlineClose />
+        </CloseButton>
+
         <div className="navbar-inner">
           <LogoWrapper className="navbar-image">
             <a className="navbar-link" href="/">

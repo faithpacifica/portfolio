@@ -4,7 +4,7 @@
   
   .tags {
     color: #515152;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0rem;
     font-style: italic;

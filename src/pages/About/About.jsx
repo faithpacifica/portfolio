@@ -28,15 +28,17 @@ import Tooltip from "@mui/material/Tooltip";
 
 // ************************************************
 const AboutPage = styled.div`
-  padding: 80px;
+  padding: 20px 40px;
   display: flex;
+
+  @media (max-width: 992px) {
+    padding: 20px;
+  }
 `;
 
 const AboutHeader = styled.h1`
   font-family: "Spectral", serif;
   font-weight: 700;
-  padding-left: 2rem;
-  padding-right: 2rem;
   color: #6c81d1;
   font-weight: 400;
   margin-top: 0;
@@ -49,7 +51,7 @@ const AboutHeader = styled.h1`
     color: #515152;
     font-size: 2rem;
     position: absolute;
-    margin-top: -2rem;
+    margin-top: -1.5rem;
     left: -1rem;
   }
   &:after {
@@ -67,6 +69,19 @@ const AboutHeader = styled.h1`
     font-size: 5.5rem;
     display: inline-block;
 
+    @media (max-width: 992px) {
+      font-size: 3.5rem;
+    }
+    @media (max-width: 465px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 425px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 365px) {
+      font-size: 2rem;
+    }
+
     &:hover {
       animation-duration: 1s;
       animation-fill-mode: both;
@@ -76,13 +91,17 @@ const AboutHeader = styled.h1`
 `;
 
 const P = styled.p`
-  padding: 10px;
   font-size: 1.4rem;
   line-height: 1.5;
-  color: white;
+  color: #a4acc4;
   font-family: "Open Sans", sans-serif;
-  text-indent: 25px;
+  // text-indent: 25px;
   font-style: italic;
+
+  @media (max-width: 991px) {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
 
   &:before {
     content: "<p>";
@@ -91,7 +110,7 @@ const P = styled.p`
     font-size: 2rem;
     position: absolute;
     margin-top: -2rem;
-    left: -2rem;
+    left: -1rem;
   }
   &:after {
     content: "<p/>";
@@ -99,16 +118,45 @@ const P = styled.p`
     color: #515152;
     font-size: 2rem;
     position: absolute;
-    left: -2rem;
-    bottom: 18rem;
+    left: -1rem;
+    bottom: 26rem;
+    @media (max-width: 1079px) {
+      bottom: 31rem;
+    }
+    @media (max-width: 991px) {
+      bottom: 25rem;
+    }
+    @media (max-width: 859px) {
+      bottom: 25rem;
+    }
+    @media (max-width: 799px) {
+      bottom: 30rem;
+    }
+    @media (max-width: 767px) {
+      bottom: 25rem;
+    }
+    @media (max-width: 759px) {
+      bottom: 25rem;
+    }
+    @media (max-width: 519px) {
+      bottom: 28rem;
+    }
+    @media (max-width: 399px) {
+      bottom: 28rem;
+    }
+    @media (max-width: 339px) {
+      bottom: 32rem;
+    }
   }
 `;
 
 const Skills = styled.div`
-  padding: 30px 0;
+  padding: 35px 0;
 `;
 
 const SkillsTitle = styled.h2`
+  margin: 0;
+  margin-bottom: 30px;
   color: #6c81d1;
   font-size: 40px;
   text-align: center;
@@ -121,7 +169,38 @@ const Icons = styled.div`
     margin-left: 20px;
     font-size: 50px;
     margin-bottom: 30px;
+    @media (max-width: 991px) {
+      margin-right: 10px;
+      margin-left: 10px;
+      font-size: 40px;
+    }
+    @media (max-width: 425px) {
+      font-size: 30px;
+    }
   }
+`;
+
+const UnorderedList = styled.ul`
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 525px) {
+    font-size: 1rem;
+    line-height: 1;
+  }
+`;
+
+const List = styled.li`
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const Bold = styled.span`
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 7px;
+  min-width: 100px;
 `;
 
 const About = () => {
@@ -210,31 +289,33 @@ const About = () => {
                       Interested in the entire frontend spectrum and working on
                       ambitious projects with positive people.
                     </Flip>
+
+                    <UnorderedList>
+                      <List>
+                        <Bold>Full Name</Bold> : Muslimova Dildora
+                      </List>
+                      <List>
+                        <Bold>Age</Bold> : 36 Years old
+                      </List>
+                      <List>
+                        <Bold>Nationality</Bold> : Uzbek
+                      </List>
+                      <List>
+                        <Bold>Languages</Bold> : Russian, English, Japanese,
+                        Uzbek
+                      </List>
+                      <List>
+                        <Bold>Address</Bold> : 9 Iltifot Street, Tashkent,
+                        Uzbekistan
+                      </List>
+                      <List>
+                        <Bold>Freelance</Bold> : Available
+                      </List>
+                    </UnorderedList>
                   </P>
                 </div>
               </div>
             </div>
-
-            <ul>
-              <li>
-                <b>Full Name</b> Muslimova Dildora
-              </li>
-              <li>
-                <b>Age</b> <span>36</span> Years old
-              </li>
-              <li>
-                <b>Nationality</b> Uzbek
-              </li>
-              <li>
-                <b>Languages</b> Uzbek, Russian, English, Japanese
-              </li>
-              <li>
-                <b>Address</b> 9 Iltifot Street, Tashkent, Uzbekistan
-              </li>
-              <li>
-                <b>Freelance</b> Available
-              </li>
-            </ul>
 
             <Skills className="skills">
               <SkillsTitle className="skills__title">My Skills</SkillsTitle>

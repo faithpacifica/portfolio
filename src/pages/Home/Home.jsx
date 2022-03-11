@@ -1,14 +1,13 @@
-import React from "react";
+import React, {useState,useContext} from "react";
 import "./home.css";
 import styled from "styled-components";
 import Particles from "../../components/Particles";
-import { useState } from "react";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Fade from "react-reveal/Fade";
 import "animate.css";
 
 import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
+import {Context} from '../../context/CustomContext'
 // ************************************************************
 const Container = styled.div`
   position: relative;
@@ -64,6 +63,7 @@ const HomeHeader = styled.h1`
   transition: all 0.5s ease-out;
   letter-spacing: -2px;
   margin:0;
+  margin-bottom:50px;
 
   span {
     color: #6c81d1;
@@ -71,7 +71,7 @@ const HomeHeader = styled.h1`
     display: inline-block;
     position: relative;
     transition: all 0.5s ease-out;
-    font-size: 5.5rem;
+    font-size: 5.4rem;
     line-height: 5rem;
     &:hover {
       animation-duration: 1s;
@@ -91,6 +91,7 @@ const HomeHeader = styled.h1`
       font-size: 3rem;
       line-height: 4rem;
     }
+
   @media (max-width: 500px) {
     font-size: 2.5rem;
   }
@@ -105,6 +106,7 @@ const HomeHeader = styled.h1`
     font-size: 2.8rem;
   }
   @media (max-width: 795px) {
+    margin-bottom:30px;
     font-size: 2.4rem;
   }
 
@@ -153,54 +155,24 @@ const HamburgerButton = styled.button`
     right:-10px;
   }
 `;
-const CloseButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position:absolute;
-  background-color: #191d2b;
-  height: 50px;
-  width: 50px;
-  right: -45px;
-  top: -45px;
-  padding: 0;
-  border: none;
-  border: 1px solid #2e344e;
-  position: absolute;
-  font-size: 1.6rem;
-  text-align: center;
-  // display: none;
 
-  svg {
-    display: inline-block;
-    color: #a4acc4;
-    line-height: 1;
-  }
-  @media (max-width: 767px) {
-    display: block;
-  }
-
-  @media (max-width: 500px) {
-    right:-20px;
-  }
-  @media (max-width: 425px) {
-    right:-10px;
-  }
-`;
 
 // *************************************
 const Home = () => {
-  const [loading, setLoading] = useState(true);
+  const [,setSidebarCloser] = useContext(Context)
+  
 
-  const [closeToggle, setCloseToggle ] = useState(false)
+  const [loading, setLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] =useState(false);
 
   setTimeout(() => {
     setLoading(false);
   }, 2000);
 
 
-  const buttonToggler = (e) => {
-    console.log(e.target)
+  const buttonToggler = () => {
+    setSidebarOpen(!sidebarOpen)
+   
   }
   // ************************************
   return (
@@ -213,14 +185,14 @@ const Home = () => {
 
           <Container className="container">
             <HomeContent className="home-content">
-              <HamburgerButton onClick={buttonToggler}>
+
+              <HamburgerButton 
+              sidebarOpen= {sidebarOpen}
+                className=''
+                onClick={buttonToggler}>
                 <GiHamburgerMenu />
               </HamburgerButton>
              
-              <CloseButton>
-                 <AiOutlineClose onClick ={() => setCloseToggle(!closeToggle)}/>
-              </CloseButton>
-
               <HomeHeader>
                 Hi, I am <br />
                 <span className="blast" aria-hidden="true">

@@ -10,13 +10,6 @@ const PortfolioSection = styled.section`
   padding: 20px;
 `;
 
-// const Title = styled.h1`
-//   font-size: 50px;
-//   line-height: 2.8;
-//   color: #6c81d1  ;
-//   margin: 0;
-// `;
-
 const Tab = styled.div`
   display: flex;
   text-align: center;

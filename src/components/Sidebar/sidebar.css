@@ -4,7 +4,7 @@
     cursor:pointer;
     text-decoration:none;
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: 1px;
     display: block;
     padding: 12px 0;
@@ -96,6 +96,8 @@
 .telegram i{
     background-color: #2CA0D2;
 }
+
+
 
 
 
