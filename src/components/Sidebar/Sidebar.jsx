@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import "./sidebar.css";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-
 import { AiOutlineClose } from "react-icons/ai";
 
 // -------------------------------
@@ -19,8 +18,11 @@ const SidebarSection = styled.div`
   transition: all 0.4s ease-out;
   border-right: 1px solid #2e344e;
   box-shadow: 0 20px 30px 10px rgb(28 9 80 / 5%);
+
   @media (max-width:767px) {
-   display:none;
+  ${(props) =>{
+    return props.sidebarShown ? 'display:block' : 'display:none'
+  }}
   }
 `;
 
@@ -111,16 +113,17 @@ const CloseButton = styled.button`
 `;
 
 // ************************************
-const Sidebar = () => {
+const Sidebar = ({sidebarOpen, setSidebarOpen}) => {
 
-  const [closeToggle, setCloseToggle ] = useState(false);
-
+const onSidebarClosed = ()=> {
+  setSidebarOpen(false)
+}
 
   return (
-    <SidebarSection className="sidebar-section">
+    <SidebarSection className="sidebar-section" sidebarShown = {sidebarOpen}>
         
       <Nav className="navbar">
-        <CloseButton className ='close-button' onClick ={() => setCloseToggle(!closeToggle)}>
+        <CloseButton className ='close-button' onClick ={onSidebarClosed}>
             <AiOutlineClose />
         </CloseButton>
 

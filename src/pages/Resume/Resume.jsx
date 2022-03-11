@@ -1,9 +1,6 @@
 import React from "react";
 import "./resume.css";
 import styled from "styled-components";
-import { useState } from "react";
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
-import Hamburger from '../../components/Hamburger';
 import { BsBriefcase } from "react-icons/bs";
 import { GiBlackBook } from "react-icons/gi";
 // ****************************************
@@ -171,247 +168,223 @@ const ResumeDetails = styled.div`
 `;
 
 const Resume = () => {
-  const [loading, setLoading] = useState(true);
-
-  setTimeout(() => {
-    setLoading(false);
-  }, 2000);
-
-  // ************************************************************
-
   return (
-    <>
-      {loading ? (
-        <ProgressBar />
-      ) : (
-        <ResumeSection>
-          <ResumeTitle>
-            <span className="blast" aria-hidden="true">
-              R
-            </span>
-            <span className="blast" aria-hidden="true">
-              E
-            </span>
-            <span className="blast" aria-hidden="true">
-              S
-            </span>
-            <span className="blast" aria-hidden="true">
-              U
-            </span>
-            <span className="blast" aria-hidden="true">
-              M
-            </span>
-            <span className="blast" aria-hidden="true">
-              E
-            </span>
-          </ResumeTitle>
+    <ResumeSection>
+      <ResumeTitle>
+        <span className="blast" aria-hidden="true">
+          R
+        </span>
+        <span className="blast" aria-hidden="true">
+          E
+        </span>
+        <span className="blast" aria-hidden="true">
+          S
+        </span>
+        <span className="blast" aria-hidden="true">
+          U
+        </span>
+        <span className="blast" aria-hidden="true">
+          M
+        </span>
+        <span className="blast" aria-hidden="true">
+          E
+        </span>
+      </ResumeTitle>
+      <div className="resume resume__body">
+        <div className="container">
+          <ResumeSubtitle className="resume-subtitle">
+            <ResumeSubtitleIcon className="resume-subtitle__icon">
+              <BsBriefcase />
+            </ResumeSubtitleIcon>
+            <h4>Working Experience</h4>
+          </ResumeSubtitle>
 
-         <Hamburger/>
+          <ResumeWrapper className="resume-wrapper">
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2021.12 - 2022.2 <div>Tashkent, Uzbekistan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5> INTERN</h5>
+                <h6 className="resume-company">Abutech Company </h6>
+                <p>
+                  {" "}
+                  Working with a team of 5 developers on legacy projects
+                  applying DRY, SOLID, clean code principles, fixing bugs,
+                  moreover, learned Typescript, GraphQL, Redux technologies.{" "}
+                </p>
+              </ResumeDetails>
+            </ResumeItem>
 
-          <div className="resume resume__body">
-            <div className="container">
-              <ResumeSubtitle className="resume-subtitle">
-                <ResumeSubtitleIcon className="resume-subtitle__icon">
-                  <BsBriefcase />
-                </ResumeSubtitleIcon>
-                <h4>Working Experience</h4>
-              </ResumeSubtitle>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2020 - present <div>Tashkent, Uzbekistan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5>PRIVATE TUTOR OF JAPANESE</h5>
+                <h6 className="resume-company"> </h6>
+              </ResumeDetails>
+            </ResumeItem>
 
-              <ResumeWrapper className="resume-wrapper">
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2021.12 - 2022.2 <div>Tashkent, Uzbekistan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5> INTERN</h5>
-                    <h6 className="resume-company">Abutech Company </h6>
-                    <p>
-                      {" "}
-                      Working with a team of 5 developers on legacy projects
-                      applying DRY, SOLID, clean code principles, fixing bugs,
-                      moreover, learned Typescript, GraphQL, Redux
-                      technologies.{" "}
-                    </p>
-                  </ResumeDetails>
-                </ResumeItem>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2019 - 2020 <div>Tashkent, Uzbekistan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5> TRANSLATOR</h5>
+                <h6 className="resume-company">Japan Digital University </h6>
+                <p> Translation of University lectures (Japanese – Uzbek)</p>
+              </ResumeDetails>
+            </ResumeItem>
 
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2020 - present <div>Tashkent, Uzbekistan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5>PRIVATE TUTOR OF JAPANESE</h5>
-                    <h6 className="resume-company"> </h6>
-                  </ResumeDetails>
-                </ResumeItem>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="mi-resume-summary">
+                <h6 className="resume-year">
+                  2016 - 2019 <div>Tokyo, Japan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5>PROJECT MANAGER ASSISTANT</h5>
+                <h6 className="resume-company">
+                  Mitsubishi Research Institute
+                </h6>
+                <p>
+                  Justification of accounting documents written in Russian for
+                  their compliance with the regulations
+                  <br />
+                  Preparation of reporting materials to the Ministry of Economy,
+                  Trade and Industry
+                  <br />
+                  Correspondence with Russian companies <br />
+                  Coordination and organization of online and offline meetings
+                  between business partners <br />
+                  Monitoring the legislation of the Russian Federation "On
+                  nuclear energy", data mining
+                  <br />
+                  Recording minutes Conducting telephone negotiations with
+                  Russian entities
+                  <br />
+                  Compose manual for the conduct of business projects,
+                  systematization and presentation of data
+                  <br />
+                  Russian - English - Japanese translations
+                </p>
+              </ResumeDetails>
+            </ResumeItem>
 
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2019 - 2020 <div>Tashkent, Uzbekistan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5> TRANSLATOR</h5>
-                    <h6 className="resume-company">
-                      Japan Digital University{" "}
-                    </h6>
-                    <p>
-                      {" "}
-                      Translation of University lectures (Japanese – Uzbek)
-                    </p>
-                  </ResumeDetails>
-                </ResumeItem>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2015 - 2016 <div>Tokyo, Japan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5>COORDINATOR</h5>
+                <h6 className="resume-company">
+                  Waseda University Center for International Education{" "}
+                </h6>
+                <p>
+                  Coordinator-supporter of international students Paperwork,
+                  preparation of documents to the Ministry of Education
+                </p>
+              </ResumeDetails>
+            </ResumeItem>
 
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="mi-resume-summary">
-                    <h6 className="resume-year">
-                      2016 - 2019 <div>Tokyo, Japan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5>PROJECT MANAGER ASSISTANT</h5>
-                    <h6 className="resume-company">
-                      Mitsubishi Research Institute
-                    </h6>
-                    <p>
-                      Justification of accounting documents written in Russian
-                      for their compliance with the regulations
-                      <br />
-                      Preparation of reporting materials to the Ministry of
-                      Economy, Trade and Industry
-                      <br />
-                      Correspondence with Russian companies <br />
-                      Coordination and organization of online and offline
-                      meetings between business partners <br />
-                      Monitoring the legislation of the Russian Federation "On
-                      nuclear energy", data mining
-                      <br />
-                      Recording minutes Conducting telephone negotiations with
-                      Russian entities
-                      <br />
-                      Compose manual for the conduct of business projects,
-                      systematization and presentation of data
-                      <br />
-                      Russian - English - Japanese translations
-                    </p>
-                  </ResumeDetails>
-                </ResumeItem>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  {" "}
+                  2014 – 2015 <div>Tokyo, Japan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5> ADMINISTRATIVE ASSISTANT</h5>
+                <h6 className="resume-company">
+                  Premium Financial Services Co., Ltd{" "}
+                </h6>
+                <p>
+                  Working with customer database, processing customer
+                  information
+                </p>
+              </ResumeDetails>
+            </ResumeItem>
+          </ResumeWrapper>
 
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2015 - 2016 <div>Tokyo, Japan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5>COORDINATOR</h5>
-                    <h6 className="resume-company">
-                      Waseda University Center for International Education{" "}
-                    </h6>
-                    <p>
-                      Coordinator-supporter of international students Paperwork,
-                      preparation of documents to the Ministry of Education
-                    </p>
-                  </ResumeDetails>
-                </ResumeItem>
+          <ResumeSubtitle className="resume-subtitle">
+            <ResumeSubtitleIcon className="resume-subtitle__icon">
+              <GiBlackBook />
+            </ResumeSubtitleIcon>
+            <h4>Educational Qualifications</h4>
+          </ResumeSubtitle>
 
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      {" "}
-                      2014 – 2015 <div>Tokyo, Japan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5> ADMINISTRATIVE ASSISTANT</h5>
-                    <h6 className="resume-company">
-                      Premium Financial Services Co., Ltd{" "}
-                    </h6>
-                    <p>
-                      Working with customer database, processing customer
-                      information
-                    </p>
-                  </ResumeDetails>
-                </ResumeItem>
-              </ResumeWrapper>
+          <ResumeWrapper className="resume-wrapper">
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2021 - 2022 <div>Tashkent, Uzbekistan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5>Frontend Developer</h5>
+                <h6 className="resume-company">
+                  Najot Talim Educational Center{" "}
+                </h6>
+                <p>
+                  I studied at Frontend Developers Bootcamp, including
+                  internship, with the duration of 1 year, that greatly boosted
+                  my knowledge and curiosity about IT. Gained skills: HTML, CSS,
+                  Bootstrap, Sass, JavaScript, React, Redux ,BEM
+                </p>
+              </ResumeDetails>
+            </ResumeItem>
 
-              <ResumeSubtitle className="resume-subtitle">
-                <ResumeSubtitleIcon className="resume-subtitle__icon">
-                  <GiBlackBook />
-                </ResumeSubtitleIcon>
-                <h4>Educational Qualifications</h4>
-              </ResumeSubtitle>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2008 - 2010 <div>Tokyo, Japan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5>MEXT program research student </h5>
+                <h6 className="resume-company">Hitotsubashi University </h6>
+              </ResumeDetails>
+            </ResumeItem>
 
-              <ResumeWrapper className="resume-wrapper">
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2021 - 2022 <div>Tashkent, Uzbekistan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5>Frontend Developer</h5>
-                    <h6 className="resume-company">
-                      Najot Talim Educational Center{" "}
-                    </h6>
-                    <p>
-                      I studied at Frontend Developers Bootcamp, including
-                      internship, with the duration of 1 year, that greatly
-                      boosted my knowledge and curiosity about IT. Gained
-                      skills: HTML, CSS, Bootstrap, Sass, JavaScript, React,
-                      Redux ,BEM
-                    </p>
-                  </ResumeDetails>
-                </ResumeItem>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2005 - 2006 <div>Tokyo, Japan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5>MEXT program trainee</h5>
+                <h6 className="resume-company">Gunma University</h6>
+              </ResumeDetails>
+            </ResumeItem>
 
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2008 - 2010 <div>Tokyo, Japan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5>MEXT program research student </h5>
-                    <h6 className="resume-company">Hitotsubashi University </h6>
-                  </ResumeDetails>
-                </ResumeItem>
-
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2005 - 2006 <div>Tokyo, Japan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5>MEXT program trainee</h5>
-                    <h6 className="resume-company">Gunma University</h6>
-                  </ResumeDetails>
-                </ResumeItem>
-
-                <ResumeItem className="resume-item">
-                  <ResumeSummary className="resume-summary">
-                    <h6 className="resume-year">
-                      2003 - 2008 <div>Tashkent, Uzbekistan</div>
-                    </h6>
-                  </ResumeSummary>
-                  <ResumeDetails className="resume-details">
-                    <h5>Bachelor of Interenational Economic Relations</h5>
-                    <h6 className="resume-company">
-                      Tashkent State University of Oriental Studies
-                    </h6>
-                  </ResumeDetails>
-                </ResumeItem>
-              </ResumeWrapper>
-            </div>
-          </div>
-        </ResumeSection>
-      )}
-    </>
+            <ResumeItem className="resume-item">
+              <ResumeSummary className="resume-summary">
+                <h6 className="resume-year">
+                  2003 - 2008 <div>Tashkent, Uzbekistan</div>
+                </h6>
+              </ResumeSummary>
+              <ResumeDetails className="resume-details">
+                <h5>Bachelor of Interenational Economic Relations</h5>
+                <h6 className="resume-company">
+                  Tashkent State University of Oriental Studies
+                </h6>
+              </ResumeDetails>
+            </ResumeItem>
+          </ResumeWrapper>
+        </div>
+      </div>
+    </ResumeSection>
   );
 };
 

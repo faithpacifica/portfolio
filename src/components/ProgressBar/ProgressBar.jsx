@@ -31,8 +31,7 @@ const Progress = styled.div`
     }
   `;
  
-  
- 
+
 const ProgressBar = () => {
   return (
     <Progress className="progress">

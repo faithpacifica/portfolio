@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React
+// , { useState } 
+from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -19,7 +21,6 @@ const HamburgerButton = styled.button`
   font-size: 1.6rem;
   text-align: center;
   display: none;
-
   cursor: pointer;
   svg {
     display: inline-block;
@@ -30,22 +31,16 @@ const HamburgerButton = styled.button`
     display: block;
     z-index: 2000;
   }
-
-  @media (max-width: 500px) {
-  }
-  @media (max-width: 425px) {
-  }
 `;
 
-const Hamburger = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+const Hamburger = ({setSidebarOpen}) => {
 
   const buttonToggler = () => {
-    setSidebarOpen(!sidebarOpen);
+    setSidebarOpen(true);
   };
+
   return (
     <HamburgerButton
-      sidebarOpen={sidebarOpen}
       className="hamburger-button"
       onClick={buttonToggler}
     >
