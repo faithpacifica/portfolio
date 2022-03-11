@@ -52,7 +52,7 @@ const AboutHeader = styled.h1`
     font-size: 2rem;
     position: absolute;
     margin-top: -1.5rem;
-    left: -1rem;
+    left: 0rem;
   }
   &:after {
     content: "<h2/>";
@@ -60,7 +60,7 @@ const AboutHeader = styled.h1`
     color: #515152;
     font-size: 2rem;
     position: absolute;
-    left: -1rem;
+    left: 0rem;
     bottom: -2rem;
   }
 
@@ -110,7 +110,7 @@ const P = styled.p`
     font-size: 2rem;
     position: absolute;
     margin-top: -2rem;
-    left: -1rem;
+    left: 0rem;
   }
   &:after {
     content: "<p/>";
@@ -118,7 +118,7 @@ const P = styled.p`
     color: #515152;
     font-size: 2rem;
     position: absolute;
-    left: -1rem;
+    left: 0rem;
     bottom: 26rem;
     @media (max-width: 1079px) {
       bottom: 31rem;
@@ -200,7 +200,7 @@ const Bold = styled.span`
   font-weight: bold;
   display: inline-block;
   margin-right: 7px;
-  min-width: 100px;
+  min-width: 120px;
 `;
 
 const About = () => {

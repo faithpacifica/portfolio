@@ -12,21 +12,35 @@ const PortfolioSection = styled.section`
 
 const Tab = styled.div`
   display: flex;
+  flex-wrap:wrap;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 `;
 
 const TabButton = styled.button`
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
-  padding: 10px 25px;
+  padding: 10px 20px;
   background-color: transparent;
   border: 2px solid #6c81d1 ;
   color: white;
   cursor: pointer;
-  margin-right: 20px;
+  margin-bottom:10px;
   transition: all 0.4s ease-out;
+
+  @media (max-width: 833px) {
+    padding: 5px 20px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 5px 10px;
+  }
+ 
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
   &:hover {
     background-color: #6c81d1;
     color: #fff;
@@ -72,6 +86,15 @@ const PortfolioTitle = styled.h1`
   line-height: 2rem;
   transition: all 0.5s ease-out;
   margin-bottom: 50px;
+
+  @media (max-width: 833px) {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 1.7rem;
+  }
     span {
       color: #6c81d1  ;
       font-weight: 500;
@@ -86,6 +109,7 @@ const PortfolioTitle = styled.h1`
     }
   }
 `;
+
 const ProjectCard = styled.div`
   width: 300px;
   height: 300px;
@@ -95,11 +119,17 @@ const ProjectCard = styled.div`
   transition: all 0.2s linear;
   transform:scale(1);
 
+  @media (max-width: 992px) {
+    width: 250px !important;
+    height:260px !important;
+  }
+
   &:hover {
     transform: scale(1.01);
     z-index: 100;
     box-shadow: 0 4px 6px #a4acc4;
   }
+
   img {
     width: 100%;
     height:100%;
