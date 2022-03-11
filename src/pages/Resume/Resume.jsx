@@ -3,6 +3,7 @@ import "./resume.css";
 import styled from "styled-components";
 import { useState } from "react";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import Hamburger from '../../components/Hamburger';
 import { BsBriefcase } from "react-icons/bs";
 import { GiBlackBook } from "react-icons/gi";
 // ****************************************
@@ -205,6 +206,8 @@ const Resume = () => {
             </span>
           </ResumeTitle>
 
+         <Hamburger/>
+
           <div className="resume resume__body">
             <div className="container">
               <ResumeSubtitle className="resume-subtitle">
@@ -218,7 +221,7 @@ const Resume = () => {
                 <ResumeItem className="resume-item">
                   <ResumeSummary className="resume-summary">
                     <h6 className="resume-year">
-                      2021 - present <div>Tashkent, Uzbekistan</div>
+                      2021.12 - 2022.2 <div>Tashkent, Uzbekistan</div>
                     </h6>
                   </ResumeSummary>
                   <ResumeDetails className="resume-details">
@@ -228,7 +231,7 @@ const Resume = () => {
                       {" "}
                       Working with a team of 5 developers on legacy projects
                       applying DRY, SOLID, clean code principles, fixing bugs,
-                      moreover, learned Typescript, GraphQL, NextJS
+                      moreover, learned Typescript, GraphQL, Redux
                       technologies.{" "}
                     </p>
                   </ResumeDetails>

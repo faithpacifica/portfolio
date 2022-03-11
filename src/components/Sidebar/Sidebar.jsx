@@ -149,7 +149,7 @@ const Sidebar = () => {
             </NavbarMenuList>
             <NavbarMenuList>
               <NavLink className="link" to="/portfolio">
-                <span>Portfolios</span>
+                <span>Portfolio</span>
               </NavLink>
             </NavbarMenuList>
             <NavbarMenuList>

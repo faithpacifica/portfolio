@@ -23,9 +23,8 @@ import { SiGitlab } from "react-icons/si";
 import { SiMaterialui } from "react-icons/si";
 import { SiNetlify } from "react-icons/si";
 import { SiFigma } from "react-icons/si";
-
 import Tooltip from "@mui/material/Tooltip";
-
+import Hamburger from '../../components/Hamburger';
 // ************************************************
 const AboutPage = styled.div`
   padding: 20px 40px;
@@ -216,6 +215,7 @@ const About = () => {
         <ProgressBar />
       ) : (
         <AboutPage>
+          <Hamburger/>
           <div className="page-outer">
             <span className="tags top-tags">
               &lt;/body&gt; <br />

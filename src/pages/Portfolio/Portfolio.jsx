@@ -3,11 +3,11 @@ import { projects } from "../../data";
 import { useState, useEffect } from "react";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import styled from "styled-components";
-
+import Hamburger from '../../components/Hamburger';
 
 const PortfolioSection = styled.section`
   margin: 0;
-  padding: 20px;
+  padding:40px  30px;
 `;
 
 const Tab = styled.div`
@@ -92,9 +92,14 @@ const PortfolioTitle = styled.h1`
     margin-bottom: 40px;
   }
 
-  @media (max-width: 425px) {
-    font-size: 1.7rem;
+  @media (max-width: 767px) {
+    font-size: 1.8rem;
   }
+
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
+  }
+
     span {
       color: #6c81d1  ;
       font-weight: 500;
@@ -145,7 +150,7 @@ export default function Portfolio() {
     setLoading(false);
   }, 2000);
 
-  const skillType = ["All", "HTML/CSS Layout", "JavaScript", "React"];
+  const skillType = ["All", "HTML/CSS", "JavaScript", "React"];
   const [projectsInput, setProjectsInput] = useState([]);
 
   useEffect(() => {
@@ -157,6 +162,7 @@ export default function Portfolio() {
   const handleClick = (e, el) => {
     let projectsMassive;
     setCurrentSkill(el);
+
     if (e.target.innerText === "All") {
       projectsMassive = projects;
     } else {
@@ -173,6 +179,9 @@ export default function Portfolio() {
         <ProgressBar />
       ) : (
         <PortfolioSection id="projects" className="projects__wrapper">
+
+          <Hamburger/>
+
           <PortfolioTitle>
             <span className="blast" aria-hidden="true">
               R

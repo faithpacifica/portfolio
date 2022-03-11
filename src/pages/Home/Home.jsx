@@ -1,15 +1,12 @@
-import React, {useState,
-  // useContext
-} from "react";
+import React, {useState} from "react";
 import "./home.css";
 import styled from "styled-components";
 import Particles from "../../components/Particles";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Fade from "react-reveal/Fade";
 import "animate.css";
+import Hamburger from '../../components/Hamburger';
 
-import { GiHamburgerMenu } from "react-icons/gi";
-// import {Context} from '../../context/CustomContext'
 // ************************************************************
 const Container = styled.div`
   position: relative;
@@ -22,7 +19,6 @@ const HomeSection = styled.div`
   justify-content: center !important;
   min-height: 100vh;
   position: relative;
-  z-index: 1000;
 
   @media (max-width: 824px) {
     padding: 30px 30px;
@@ -123,58 +119,18 @@ const HomeHeader = styled.h1`
 
 const HomeContent = styled.div``;
 
-const HamburgerButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position:absolute;
-  background-color: #191d2b;
-  height: 50px;
-  width: 50px;
-  right: -45px;
-  top: -45px;
-  padding: 0;
-  border: none;
-  border: 1px solid #2e344e;
-  position: absolute;
-  font-size: 1.6rem;
-  text-align: center;
-  display: none;
-
-  svg {
-    display: inline-block;
-    color: #a4acc4;
-    line-height: 1;
-  }
-  @media (max-width: 767px) {
-    display: block;
-  }
-
-  @media (max-width: 500px) {
-    right:-20px;
-  }
-  @media (max-width: 425px) {
-    right:-10px;
-  }
-`;
-
 
 // *************************************
 const Home = () => {
-  // const [,setSidebarCloser] = useContext(Context)
-  
 
   const [loading, setLoading] = useState(true);
-  // const [sidebarOpen, setSidebarOpen] =useState(false);
+ 
 
   setTimeout(() => {
     setLoading(false);
   }, 2000);
 
 
-  // const buttonToggler = () => {
-  //   setSidebarOpen(!sidebarOpen)
-  // }
 
   // ************************************
   return (
@@ -185,17 +141,10 @@ const Home = () => {
         <HomeSection className="home-section">
           <Particles id="tsparticles" />
 
-          <Container className="container">
-            <HomeContent className="home-content">
+          <Hamburger/>
 
-              <HamburgerButton 
-              // sidebarOpen= {sidebarOpen}
-                className='hamburger-button'
-                // onClick={buttonToggler}
-                >
-                <GiHamburgerMenu />
-              </HamburgerButton>
-             
+          <Container className="container">
+            <HomeContent className="home-content"> 
               <HomeHeader>
                 Hi, I am <br />
                 <span className="blast" aria-hidden="true">

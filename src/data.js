@@ -2,15 +2,15 @@ export const projects = [
     {
         "id":1,
         "title": "Namanganliklar24",
-        "link": "https://github.com/faithpacifica/Namanganliklar24",
+        "link": "https://didi-namanganliklar24.netlify.app/",
         "image":"img/namanganliklar24.png",
-        "categories":"HTML/CSS Layout"
+        "categories":"HTML/CSS"
     },
 
     {
         "id":2,
         "title": "MovieApp",
-        "link": "https://github.com/faithpacifica/movieapp",
+        "link": "https://didi-movie-app-with-react.netlify.app/",
         "image":"img/movies-app.png",
         "categories":"React"
     },
@@ -25,7 +25,7 @@ export const projects = [
     {
         "id":4,
         "title": "Movielist",
-        "link": "https://github.com/faithpacifica/Movie-list",
+        "link": "https://didi-movieslist.netlify.app/",
         "image":"img/movielist.png",
         "categories":"JavaScript"
     },
@@ -33,21 +33,21 @@ export const projects = [
     {
         "id":5,
         "title": "My Portfolio-template",
-        "link": "https://github.com/faithpacifica/TemplateW3school",
+        "link": "https://template-w3school.netlify.app/",
         "image":"img/temp_portfolio.jpg",
-        "categories":"HTML/CSS Layout"
+        "categories":"HTML/CSS"
     },
     {
         "id":6,
         "title": "Cofeeroasters",
-        "link": "https://github.com/faithpacifica/cofeeroasters",
+        "link": "https://cofeeroasters.netlify.app/",
         "image":"img/coffee.jpg",
-        "categories":"HTML/CSS Layout"
+        "categories":"HTML/CSS"
     },
     {
         "id":7,
         "title": "Meals market",
-        "link": "https://github.com/faithpacifica/Meals-market",
+        "link": "https://didi-mealsmarket.netlify.app/",
         "image":"img/food-market.jpg",
         "categories":"JavaScript"
     }

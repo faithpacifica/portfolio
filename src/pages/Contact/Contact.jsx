@@ -3,7 +3,7 @@ import "./contact.css";
 import styled from "styled-components";
 import { useState } from "react";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-
+import Hamburger from '../../components/Hamburger';
 import { BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiMapPinLine } from "react-icons/ri";
@@ -36,7 +36,7 @@ const ContactTitle = styled.h1`
   }
 `;
 const ContactSection = styled.div`
-  padding: 30px 20px;
+  padding: 40px 20px;
 `;
 
 const ContactDetails = styled.div`
@@ -82,7 +82,6 @@ const ContactContextIitle = styled.h4`
   font-size: 1.14rem;
     line-height: 1.857rem;
     color:#fff;
-    
 `;
 
 const ContactContent = styled.div`
@@ -146,6 +145,7 @@ const Contact = () => {
         <ProgressBar />
       ) : (
         <ContactSection>
+          <Hamburger/>
            <ContactTitle>
             <span className="blast" aria-hidden="true">
               C
