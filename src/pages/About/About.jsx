@@ -125,22 +125,13 @@ const P = styled.p`
     @media (max-width: 991px) {
       bottom: 25rem;
     }
-    @media (max-width: 859px) {
-      bottom: 25rem;
-    }
     @media (max-width: 799px) {
       bottom: 30rem;
     }
     @media (max-width: 767px) {
       bottom: 25rem;
     }
-    @media (max-width: 759px) {
-      bottom: 25rem;
-    }
     @media (max-width: 519px) {
-      bottom: 28rem;
-    }
-    @media (max-width: 399px) {
       bottom: 28rem;
     }
     @media (max-width: 339px) {

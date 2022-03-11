@@ -26,7 +26,7 @@ const TabButton = styled.button`
   border: 2px solid #6c81d1 ;
   color: white;
   cursor: pointer;
-  margin-bottom:10px;
+  margin-bottom:20px;
   transition: all 0.4s ease-out;
 
   @media (max-width: 833px) {
