@@ -1,4 +1,6 @@
-import React, {useState,useContext} from "react";
+import React, {useState,
+  // useContext
+} from "react";
 import "./home.css";
 import styled from "styled-components";
 import Particles from "../../components/Particles";
@@ -7,7 +9,7 @@ import Fade from "react-reveal/Fade";
 import "animate.css";
 
 import { GiHamburgerMenu } from "react-icons/gi";
-import {Context} from '../../context/CustomContext'
+// import {Context} from '../../context/CustomContext'
 // ************************************************************
 const Container = styled.div`
   position: relative;
@@ -163,17 +165,17 @@ const Home = () => {
   
 
   const [loading, setLoading] = useState(true);
-  const [sidebarOpen, setSidebarOpen] =useState(false);
+  // const [sidebarOpen, setSidebarOpen] =useState(false);
 
   setTimeout(() => {
     setLoading(false);
   }, 2000);
 
 
-  const buttonToggler = () => {
-    setSidebarOpen(!sidebarOpen)
-   
-  }
+  // const buttonToggler = () => {
+  //   setSidebarOpen(!sidebarOpen)
+  // }
+
   // ************************************
   return (
     <>
@@ -187,9 +189,10 @@ const Home = () => {
             <HomeContent className="home-content">
 
               <HamburgerButton 
-              sidebarOpen= {sidebarOpen}
-                className=''
-                onClick={buttonToggler}>
+              // sidebarOpen= {sidebarOpen}
+                className='hamburger-button'
+                // onClick={buttonToggler}
+                >
                 <GiHamburgerMenu />
               </HamburgerButton>
              
