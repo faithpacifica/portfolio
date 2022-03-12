@@ -36,12 +36,13 @@ function App() {
 
 
   return (
-    <div className="wrapper">
+    <>
       {
       loading ? (
         <ProgressBar />
       ) : (
-        <>
+       
+         <div className="wrapper">
           <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
           <Hamburger setSidebarOpen={setSidebarOpen} />
           <Routes>
@@ -52,9 +53,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </>
+        </div>  
+       
       )}
-    </div>
+     </>
   );
 }
 

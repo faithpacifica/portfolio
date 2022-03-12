@@ -61,14 +61,10 @@ const InfoBlock = styled.div`
 
 const InfoBlockIcon = styled.span`
   display: inline-block;
-  height: 70px;
-  width: 70px;
-  flex: 0 0 70px;
-  max-width: 70px;
   border: 1px solid #2e344e;
   text-align: center;
   margin-right: 20px;
-  padding: 10px;
+  padding: 15px;
   svg {
     font-size: 30px;
   }
