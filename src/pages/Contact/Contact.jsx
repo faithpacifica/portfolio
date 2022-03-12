@@ -64,7 +64,7 @@ const InfoBlockIcon = styled.span`
   border: 1px solid #2e344e;
   text-align: center;
   margin-right: 20px;
-  padding: 15px;
+  padding: 10px 15px;
   svg {
     font-size: 30px;
   }
