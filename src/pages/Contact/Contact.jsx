@@ -125,6 +125,9 @@ const ContactMap = styled.div`
     width: 100%;
     display: block;
     object-fit: cover;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
   }
 `;
 // *************************************
@@ -215,7 +218,7 @@ const Contact = () => {
             width="400"
             height="400"
             title="googleMap"
-            allowfullscreen=""
+            allowfullscreen="true"
             loading="lazy"
           ></iframe>
         </ContactMap>
