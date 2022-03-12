@@ -322,7 +322,7 @@ const About = () => {
                 <SiTypescript title="Typescript" style={{ color: "#0176C5" }} />
               </Tooltip>
               <Tooltip title="Github">
-                <BsGithub title="Github" style={{ color: "#000000" }} />
+                <BsGithub title="Github" style={{ color: "#000000", backgroundColor: '#a4acc4', borderRadius:'50%' }} />
               </Tooltip>
               <Tooltip title="Redux">
                 <SiRedux title="Redux" style={{ color: "#7248B6" }} />
@@ -349,7 +349,7 @@ const About = () => {
                 <SiNetlify title="Netlify" style={{ color: "#419FB7" }} />
               </Tooltip>
               <Tooltip title="Figma">
-                <SiFigma title="Figma" style={{ color: "#000" }} />
+                <SiFigma title="Figma" style={{ color: "#a4acc4"}} />
               </Tooltip>
             </Rotate>
           </Icons>
